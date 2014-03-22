@@ -41,6 +41,11 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     childprocess (0.5.1)
       ffi (~> 1.0, >= 1.0.11)
     coderay (1.1.0)
@@ -69,6 +74,7 @@ GEM
     diff-lcs (1.2.5)
     diffy (3.0.3)
     erubis (2.7.0)
+    excon (0.32.1)
     execjs (2.0.2)
     factory_girl (4.2.0)
       activesupport (>= 3.0.0)
@@ -76,6 +82,27 @@ GEM
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
     ffi (1.9.3)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
+    fog (1.21.0)
+      fog-brightbox
+      fog-core (~> 1.21, >= 1.21.1)
+      fog-json
+      nokogiri (~> 1.5, >= 1.5.11)
+    fog-brightbox (0.0.1)
+      fog-core
+      fog-json
+    fog-core (1.21.1)
+      builder
+      excon (~> 0.32)
+      formatador (~> 0.2.0)
+      mime-types
+      net-scp (~> 1.1)
+      net-ssh (>= 2.1.3)
+    fog-json (1.0.0)
+      multi_json (~> 1.0)
+    formatador (0.2.4)
     foundation-rails (5.2.1.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -110,9 +137,14 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25.1)
+    mini_magick (3.7.0)
+      subexec (~> 0.2.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.9.2)
+    net-scp (1.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.8.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
@@ -203,7 +235,8 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.9)
-    thor (0.18.1)
+    subexec (0.2.3)
+    thor (0.19.0)
     thread_safe (0.3.1)
       atomic (>= 1.1.7, < 2)
     tilt (1.4.1)
@@ -230,14 +263,18 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara (= 2.1.0)
+  carrierwave
   coffee-rails (~> 4.0.0)
   devise
   factory_girl_rails (= 4.2.1)
+  figaro
+  fog
   foundation-rails
   hirb
   jazz_hands
   jbuilder (~> 1.2)
   jquery-rails
+  mini_magick
   pg (= 0.15.1)
   rails (= 4.0.3)
   rails_12factor (= 0.0.2)
