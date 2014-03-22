@@ -8,8 +8,8 @@
 User.destroy_all
 
 users = [
-  {first_name: "Batman", last_name: "Ass", email: 'batman@example.com', password: 'DickGrayson4Life'},
-  {first_name: "Catwoman", last_name: "Bitch", email: 'catwoman@example.com', password: 'I<3Bruce'}
+  {first_name: "Ian", last_name: "White", email: 'ian@example.com', password: 'IanSamplePassword'},
+  {first_name: "Charlie", last_name: "Day", email: 'charlie@example.com', password: 'CharlieSamplePassword'}
 ]
 
 users.each do |user|
