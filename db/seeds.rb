@@ -5,3 +5,18 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+User.destroy_all
+
+users = [
+  {first_name: "Batman", last_name: "Ass", email: 'batman@example.com', password: 'DickGrayson4Life'},
+  {first_name: "Catwoman", last_name: "Bitch", email: 'catwoman@example.com', password: 'I<3Bruce'}
+]
+
+users.each do |user|
+  User.create(
+    first_name: user[:first_name],
+    last_name: user[:last_name],
+    email: user[:email],
+    password: user[:password],
+  )
+end

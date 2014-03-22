@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'foundation-rails'
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
@@ -35,6 +36,8 @@ group :development do
   gem 'jazz_hands'
   gem 'hirb'
   gem 'rspec-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do
@@ -48,7 +51,7 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.1.2'
+# gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
